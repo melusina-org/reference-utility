@@ -15,22 +15,34 @@
   :description "A reference implementation of a basic Lisp utility"
   :author "Michaël Le Barbier"
   :license "MIT License"
-  :depends-on (:alexandria)
+  :depends-on (#:alexandria)
   :components
   ((:module "src"
-      :components ((:file "package")
-                   (:file "utilities")
-		   (:file "entrypoint")))))
+    :components ((:file "package")
+                 (:file "utilities")
+		 (:file "entrypoint")))))
 
 (asdf:defsystem #:org.melusina.reference-utility/testsuite
   :description "A reference implementation of a basic Lisp utility"
   :author "Michaël Le Barbier"
   :license "MIT License"
-  :depends-on (:alexandria :org.melusina.confidence :org.melusina.reference-utility)
+  :depends-on (#:alexandria
+	       #:org.melusina.confidence
+	       #:org.melusina.reference-utility)
   :components
   ((:module "testsuite"
     :components ((:file "package")
 		 (:file "utilities")
 		 (:file "entrypoint")))))
+
+(asdf:defsystem #:org.melusina.reference-utility/development
+  :description "Development tools for Reference Utility"
+  :author "Michaël Le Barbier"
+  :license "MIT License"
+  :depends-on (#:alexandria
+	       #:org.melusina.atelier)
+  :components
+  ((:module "libexec/lisp"
+    :components ((:file "development")))))
 
 ;;;; End of file `org.melusina.reference-utility.asd'
