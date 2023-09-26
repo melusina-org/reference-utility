@@ -1,4 +1,4 @@
-;;;; entrypoint.lisp — Entrypoint for Reference Utility
+;;;; entry-point.lisp — Entrypoint for Reference Utility
 
 ;;;; Reference Utility (https://github.com/melusina-org/reference-utility)
 ;;;; This file is part of Reference Utility.
@@ -16,4 +16,4 @@
 (define-testcase run-all-tests ()
   (assert-t t))
 
-;;;; End of file `entrypoint.lisp'
+;;;; End of file `entry-point.lisp'

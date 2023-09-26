@@ -20,7 +20,7 @@
   ((:module "src"
     :components ((:file "package")
                  (:file "utilities")
-		 (:file "entrypoint")))))
+		 (:file "entry-point")))))
 
 (asdf:defsystem #:org.melusina.reference-utility/testsuite
   :description "A reference implementation of a basic Lisp utility"
@@ -33,7 +33,7 @@
   ((:module "testsuite"
     :components ((:file "package")
 		 (:file "utilities")
-		 (:file "entrypoint")))))
+		 (:file "entry-point")))))
 
 (asdf:defsystem #:org.melusina.reference-utility/development
   :description "Development tools for Reference Utility"
@@ -44,5 +44,15 @@
   :components
   ((:module "libexec/lisp"
     :components ((:file "development")))))
+
+
+(asdf:defsystem #:org.melusina.reference-utility/executable
+  :description "Build executable for Reference Utility"
+  :author "Michaël Le Barbier"
+  :license "MIT License"
+  :depends-on (#:org.melusina.reference-utility)
+  :build-operation program-op
+  :build-pathname "reference-utility-command"
+  :entry-point "org.melusina.reference-utility:entry-point")
 
 ;;;; End of file `org.melusina.reference-utility.asd'

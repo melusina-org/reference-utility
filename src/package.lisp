@@ -14,7 +14,7 @@
 (defpackage #:org.melusina.reference-utility
   (:use #:common-lisp)
   (:export
-   #:entrypoint
+   #:entry-point
   ))
 
 (in-package #:org.melusina.reference-utility)
