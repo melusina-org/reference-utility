@@ -1,4 +1,5 @@
 main-system: 'org.melusina.reference-utility'
+executable-system: 'org.melusina.reference-utility/executable'
 unit-tests:
   system: 'org.melusina.reference-utility/testsuite'
   entrypoint: 'run-all-tests'
